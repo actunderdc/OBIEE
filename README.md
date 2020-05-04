@@ -27,8 +27,8 @@ https://www.oracle.com/middleware/technologies/obiee-samples-downloads.html (the
 </details>
 
 2. Extract the files to get a single .ova file (about 25GB in size).
-3. Use VirtualBox (or Vmware): File -> Import Appliance -> next next etc.
-4. Change the networking settings of the virtual machine. Make sure NAT is selected, and in Advanced -> Port Forwarding both Host IP and Guest IP are left empty.
+3. Use VirtualBox (or Vmware): `File` -> `Import Appliance` -> `next next` etc.
+4. Change the networking settings of the virtual machine. Make sure NAT is selected, and in `Advanced` -> `Port Forwarding` both Host IP and Guest IP are left empty.
 <details>
   <summary>Click to see image</summary>
   
@@ -37,7 +37,7 @@ https://www.oracle.com/middleware/technologies/obiee-samples-downloads.html (the
 
 If everything is set up correctly, any request received by your host machine on port 7780 will be forwared to the virtual machine where the BI server is.
 
-5. Start the Virtual Machine. Click on Start -> Start DB & BI. This process will take some good minutes, please be patient until you receive a message telling you that all services are started and that you should not close the terminal window.
+5. Start the Virtual Machine. Click on `Start` -> `Start DB & BI`. This process will take some good minutes, please be patient until you receive a message telling you that all services are started and that you should not close the terminal window.
 <details>
   <summary>Click to see image</summary>
   
@@ -49,12 +49,12 @@ http://localhost:7780/analytics/saw.dll?bieehome
 (If it's not working, try the same url from the virtual machine using the Firefox browser that is pinned in the taskbar. You have a bookmark there named OBIEE login. In this way you can debug if it's a problem with the BI server or with the port forwarding)
 
 ## Deploying the application
-* If using Eclipse chose File -> Import -> Existing Projects into Workspace -> OracleBI
-* Make sure you have a server defined. Right click on the project -> Run as -> Run on server
+* If using Eclipse chose `File` -> `Import` -> Existing Projects into Workspace -> OracleBI
+* Make sure you have a server defined. Right click on the project -> `Run as` -> `Run on server`
 * Access page http://localhost:8080/OracleBI/ and follow the instructions from there. **Always use incognito to avoid caching resources from the BI server!**
 
 ## Useful info:
-All classes from \src\oracle\bi\web\soap have been generated using wsimport tool (from java) with the following command:
+All classes from `\src\oracle\bi\web\soap` have been generated using wsimport tool (from java) with the following command:
 ```
 wsimport -keep  http://127.0.0.1:9502/analytics/saw.dll/wsdl/v12
 ```
